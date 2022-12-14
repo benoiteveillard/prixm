@@ -288,3 +288,10 @@ montantWrapper.forEach(
 
     }
 }
+
+// Wized API
+window.onload = async () => {
+  Wized.request.await("Name of your request to listen for", (response) => {
+  Wized.data.setVariable("montant", montant); //you can also set a variable inside of wized and have an action update something on the page every time you change the value of the variable
+});
+}
