@@ -288,11 +288,3 @@ montantWrapper.forEach(
 
     }
 }
-
-
-let checkbox = document.getElementById('#societe-wrapper');
-let societe = document.getElementById('#societe');
-
-checkbox.addEventListener("click", function () {
-  societe.classList.toggle("hide");
-});
