@@ -1,8 +1,9 @@
-let recu, payment, frequencePayment;
+let recu, payment, frequencePayment, montant;
 
 const recuWrapper = document.getElementsByName("recu_fiscal");
 const paymentWrapper = document.getElementsByName("moyen_paiement");
 const frequenceWrapper = document.getElementsByName("frequence");
+const montantWrapper = document.getElementsByName("montant");
 
 recuWrapper.forEach(
   (recuWrapper) =>
@@ -24,6 +25,14 @@ frequenceWrapper.forEach(
   (frequenceWrapper) =>
     (frequenceWrapper.onclick = (e) => {
       frequencePayment = e.target.value;
+      updateValue();
+    })
+);
+
+montantWrapper.forEach(
+  (montantWrapper) =>
+    (montantWrapper.onclick = (e) => {
+      montant = e.target.value;
       updateValue();
     })
 );
