@@ -1,9 +1,10 @@
-let recu, payment, frequencePayment, montant;
+let recu, payment, frequencePayment, montant, montant2;
 
 const recuWrapper = document.getElementsByName("recu_fiscal");
 const paymentWrapper = document.getElementsByName("moyen_paiement");
 const frequenceWrapper = document.getElementsByName("frequence");
 const montantWrapper = document.getElementsByName("montant");
+const montantWrapper2 = document.getElementsByName("montant2");
 
 recuWrapper.forEach(
   (recuWrapper) =>
@@ -33,6 +34,14 @@ montantWrapper.forEach(
   (montantWrapper) =>
     (montantWrapper.onclick = (e) => {
       montant = e.target.value;
+      updateValue();
+    })
+);
+
+montantWrapper2.forEach(
+  (montantWrapper2) =>
+    (montantWrapper2.onclick = (e) => {
+      montant2 = e.target.value;
       updateValue();
     })
 );
@@ -312,6 +321,7 @@ montantWrapper.forEach(
       document.getElementById("don_15").classList.remove("bg-orange");
       document.getElementById("don_10").classList.remove("bg-orange");
       document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
     }
 
     else if (montant === "50") {
@@ -322,6 +332,7 @@ montantWrapper.forEach(
       document.getElementById("don_15").classList.remove("bg-orange");
       document.getElementById("don_10").classList.remove("bg-orange");
       document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
     }
 
     else if (montant === "30") {
@@ -332,8 +343,340 @@ montantWrapper.forEach(
       document.getElementById("don_15").classList.remove("bg-orange");
       document.getElementById("don_10").classList.remove("bg-orange");
       document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
     }
-    else{
-      console.log("coucou");
+
+    else if (montant === "20") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.add("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant === "20") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.add("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant === "15") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.add("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant === "10") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.add("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant === "5") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.add("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant === "0") {
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+      document.getElementById("don_libre-wrapper").classList.add("bg-orange");
+    }
+
+     // Mettre l'icon avec current pour les montants
+
+     if (montant === "100") {
+      document.getElementById("ic_don_100").classList.add("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "50") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.add("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "30") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.add("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "20") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.add("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "15") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.add("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "10") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.add("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "5") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.add("current");
+      document.getElementById("ic_don_libre").classList.remove("current");
+    }
+
+    else if (montant === "0") {
+      document.getElementById("ic_don_100").classList.remove("current");
+      document.getElementById("ic_don_50").classList.remove("current");
+      document.getElementById("ic_don_30").classList.remove("current");
+      document.getElementById("ic_don_20").classList.remove("current");
+      document.getElementById("ic_don_15").classList.remove("current");
+      document.getElementById("ic_don_10").classList.remove("current");
+      document.getElementById("ic_don_5").classList.remove("current");
+      document.getElementById("ic_don_libre").classList.add("current");
+    }
+
+    // Mettre le wrapper en orange pour le montant2
+    if (montant2 === "1000") {
+      document.getElementById("don2_1000").classList.add("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "500") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.add("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "200") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.add("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "100") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.add("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "80") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.add("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "50") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.add("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "30") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.add("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.remove("bg-orange");
+    }
+
+    else if (montant2 === "0") {
+      document.getElementById("don2_1000").classList.remove("bg-orange");
+      document.getElementById("don2_500").classList.remove("bg-orange");
+      document.getElementById("don2_200").classList.remove("bg-orange");
+      document.getElementById("don2_100").classList.remove("bg-orange");
+      document.getElementById("don2_80").classList.remove("bg-orange");
+      document.getElementById("don2_50").classList.remove("bg-orange");
+      document.getElementById("don2_30").classList.remove("bg-orange");
+      document.getElementById("don2_libre-wrapper").classList.add("bg-orange");
+    }
+
+     // Mettre l'icon avec current pour les montant2s
+
+    if (montant2 === "1000") {
+      document.getElementById("ic_don2_1000").classList.add("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "500") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.add("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "200") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.add("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "100") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.add("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+    else if (montant2 === "80") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.add("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "50") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.add("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "30") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.add("current");
+      document.getElementById("ic_don2_libre").classList.remove("current");
+    }
+
+    else if (montant2 === "0") {
+      document.getElementById("ic_don2_1000").classList.remove("current");
+      document.getElementById("ic_don2_500").classList.remove("current");
+      document.getElementById("ic_don2_200").classList.remove("current");
+      document.getElementById("ic_don2_100").classList.remove("current");
+      document.getElementById("ic_don2_80").classList.remove("current");
+      document.getElementById("ic_don2_50").classList.remove("current");
+      document.getElementById("ic_don2_30").classList.remove("current");
+      document.getElementById("ic_don2_libre").classList.add("current");
     }
 }
