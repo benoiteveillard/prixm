@@ -1,4 +1,4 @@
-let recu, payment, frequencePayment, montant;
+let recu, payment, frequencePayment, montant, choix;
 
 const recuWrapper = document.getElementsByName("recu_fiscal");
 const paymentWrapper = document.getElementsByName("moyen_paiement");
@@ -33,6 +33,14 @@ montantWrapper.forEach(
   (montantWrapper) =>
     (montantWrapper.onclick = (e) => {
       montant = e.target.value;
+      updateValue();
+    })
+);
+
+choixMontant.forEach(
+  (choixMontant) =>
+    (choixMontant.onclick = (e) => {
+      choix = e.target.value;
       updateValue();
     })
 );
@@ -302,5 +310,36 @@ montantWrapper.forEach(
     document.getElementById("montant-mensuel").classList.add("hide");
     document.getElementById("montant-ponctuel").classList.remove("hide");
 
+    }
+
+    // Mettre le wrapper en orange pour le montant
+    if (choix === "100"){
+      document.getElementById("don_100").classList.add("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+    }
+
+    else if (choix === "50"{
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.add("bg-orange");
+      document.getElementById("don_30").classList.remove("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
+    }
+
+    else if (choix === "30"{
+      document.getElementById("don_100").classList.remove("bg-orange");
+      document.getElementById("don_50").classList.remove("bg-orange");
+      document.getElementById("don_30").classList.add("bg-orange");
+      document.getElementById("don_20").classList.remove("bg-orange");
+      document.getElementById("don_15").classList.remove("bg-orange");
+      document.getElementById("don_10").classList.remove("bg-orange");
+      document.getElementById("don_5").classList.remove("bg-orange");
     }
 }
