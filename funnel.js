@@ -313,7 +313,7 @@ choixMontant.forEach(
     }
 
     // Mettre le wrapper en orange pour le montant
-    if (choix === "100"){
+    if (choix === "100") {
       document.getElementById("don_100").classList.add("bg-orange");
       document.getElementById("don_50").classList.remove("bg-orange");
       document.getElementById("don_30").classList.remove("bg-orange");
@@ -323,7 +323,7 @@ choixMontant.forEach(
       document.getElementById("don_5").classList.remove("bg-orange");
     }
 
-    else if (choix === "50"{
+    else if (choix === "50") {
       document.getElementById("don_100").classList.remove("bg-orange");
       document.getElementById("don_50").classList.add("bg-orange");
       document.getElementById("don_30").classList.remove("bg-orange");
@@ -333,7 +333,7 @@ choixMontant.forEach(
       document.getElementById("don_5").classList.remove("bg-orange");
     }
 
-    else if (choix === "30"{
+    else if (choix === "30") {
       document.getElementById("don_100").classList.remove("bg-orange");
       document.getElementById("don_50").classList.remove("bg-orange");
       document.getElementById("don_30").classList.add("bg-orange");
