@@ -197,6 +197,10 @@ montantWrapper.forEach(
     document.getElementById("btn_form").classList.add("hide");
     document.getElementById("btn_onetime").classList.add("hide");
     document.getElementById("btn_recurrent").classList.remove("hide");
+
+    // Afficher les bons montants de don
+    document.getelementById("montant-mensuel").classList.remove("hide");
+    document.getelementById("montant-ponctuel").classList.add("hide");
   
     } else if (frequencePayment === "ponctuelle"){
   
@@ -212,6 +216,10 @@ montantWrapper.forEach(
     document.getElementById("btn_form").classList.add("hide");
     document.getElementById("btn_onetime").classList.remove("hide");
     document.getElementById("btn_recurrent").classList.add("hide"); 
+
+    // Afficher les bons montants de don
+    document.getelementById("montant-mensuel").classList.add("hide");
+    document.getelementById("montant-ponctuel").classList.remove("hide");
 
     }
 
