@@ -333,4 +333,7 @@ montantWrapper.forEach(
       document.getElementById("don_10").classList.remove("bg-orange");
       document.getElementById("don_5").classList.remove("bg-orange");
     }
+    else(){
+      console.log("coucou");
+    }
 }
