@@ -78,6 +78,10 @@ montantWrapper.forEach(
     document.getElementById("btn_onetime").classList.remove("hide");
     document.getElementById("btn_recurrent").classList.add("hide");
 
+    // Afficher les bons montants de don
+    document.getElementById("montant-mensuel").classList.remove("hide");
+    document.getElementById("montant-ponctuel").classList.add("hide");
+
     
     } 
     // Si sans reçu fiscal
