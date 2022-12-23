@@ -244,6 +244,9 @@ montantWrapper2.forEach(
     document.getElementById("ic_carte").classList.add("current");
     document.getElementById("ic_virement").classList.remove("current");
     document.getElementById("ic_cheque").classList.remove("current");
+
+    // Montrer les champs CP, Ville etc..
+    document.getElementById("coordonnee2").classList.remove("hide");
   
     } 
     // Si paiement par virement bancaire
@@ -264,6 +267,9 @@ montantWrapper2.forEach(
     document.getElementById("btn_onetime").classList.add("hide");
     document.getElementById("btn_recurrent").classList.add("hide");
 
+    // Montrer les champs CP, Ville etc..
+    document.getElementById("coordonnee2").classList.remove("hide");
+
     } 
     // Si paiement par chèque
     else if (payment === "cheque"){
@@ -283,6 +289,9 @@ montantWrapper2.forEach(
     document.getElementById("btn_onetime").classList.add("hide");
     document.getElementById("btn_recurrent").classList.add("hide");
 
+    // Cacher les champs CP, Ville etc..
+    document.getElementById("coordonnee2").classList.add("hide");
+
     
     }
 
@@ -297,6 +306,7 @@ montantWrapper2.forEach(
     // Afficher les bons montants de don
     document.getElementById("montant-mensuel").classList.remove("hide");
     document.getElementById("montant-ponctuel").classList.add("hide");
+
 
     }
     else if (payment === "carte" && frequencePayment === "ponctuelle"){
