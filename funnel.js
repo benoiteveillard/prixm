@@ -679,4 +679,55 @@ montantWrapper2.forEach(
       document.getElementById("ic_don2_30").classList.remove("current");
       document.getElementById("ic_don2_libre").classList.add("current");
     }
+  
 }
+
+
+      // Au changement sur montant-libre, alors changer la valeur de la variable montant
+      document.getElementById("montant-libre").addEventListener("change", function() {
+        // Aller chercher la valeur définie dans "montant-libre"
+        montant = this.value;
+      });
+
+      // Au click sur l'input 'montant-libre', clicker sur le wrapper et se mettre au focus
+      document.getElementById("montant-libre").addEventListener("click", function() {
+        // Click on the element with ID "don_libre-wrapper"
+        document.getElementById("don_libre-wrapper").click();
+      
+        // Retourner au focus sur l'élément avec ID "montant-libre"
+        this.focus();
+      });
+      
+      // Au clic sur un radio button, remettre la valeur du montant libre par défaut
+      document.querySelectorAll("[name='montant']").forEach(function(radioButton) {
+        radioButton.addEventListener("click", function() {
+          // Supprimer la valeur de ID "montant-libre"
+          document.getElementById("montant-libre").value = "";
+        });
+      });
+      
+      
+
+      // Au changement sur montant-libre2, alors changer la valeur de la variable montant
+      document.getElementById("montant-libre-2").addEventListener("change", function() {
+        // Aller chercher la valeur définie dans "montant-libre"
+        montant2 = this.value;
+      });
+
+      // Au click sur l'input 'montant-libre', clicker sur le wrapper et se mettre au focus
+      document.getElementById("montant-libre-2").addEventListener("click", function() {
+        // Click on the element with ID "don_libre-wrapper"
+        document.getElementById("don2_libre-wrapper").click();
+      
+        // Retourner au focus sur l'élément avec ID "montant-libre"
+        this.focus();
+      });
+      
+      // Au clic sur un radio button, remettre la valeur du montant libre par défaut
+      document.querySelectorAll("[name='montant2']").forEach(function(radioButton) {
+        radioButton.addEventListener("click", function() {
+          // Supprimer la valeur de ID "montant-libre"
+          document.getElementById("montant-libre-2").value = "";
+        });
+      });
+      
