@@ -6,7 +6,9 @@ const frequenceWrapper = document.getElementsByName("frequence");
 const montantWrapper = document.getElementsByName("montant");
 const btnDynamic = document.getElementById("btn-dynamic");
 const btnWebflow = document.getElementById("btn_form");
-let emailUser = document.getElementById("email");
+let email = document.getElementById("email");
+let prenomUser = document.getElementById("prenom").value;
+let nomUser = document.getElementById("nom").value;
 
 const wrapperToModify = [
   "don_100",
@@ -160,6 +162,10 @@ montantWrapper.forEach(
     document.getElementById("titre-step5bis").classList.add("hide");
     document.getElementById("titre-step5").classList.remove("hide");
 
+    // Cacher le bouton Stripe
+    btnDynamic.classList.remove("hide");
+    btnWebflow.classList.add("hide");
+
     }
     // Si avec reçu fiscal et par virement
     else if (recu === "avec" && payment === "virement") {
@@ -299,9 +305,6 @@ montantWrapper.forEach(
     // Montrer les champs CP, Ville etc..
     document.getElementById("coordonnee2").classList.remove("hide");
 
-    // Cacher le bouton Stripe
-    btnDynamic.classList.add("hide");
-    btnWebflow.classList.remove("hide");
 
     // Afficher les bons montants de don
     wrapperToModify.forEach(elementId => {
@@ -338,10 +341,6 @@ montantWrapper.forEach(
 
     // Cacher les champs CP, Ville etc..
     document.getElementById("coordonnee2").classList.add("hide");
-
-    // Cacher le bouton Stripe
-    btnDynamic.classList.add("hide");
-    btnWebflow.classList.remove("hide");
 
     // Afficher les bons montants de don
     wrapperToModify.forEach(elementId => {
@@ -420,9 +419,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_100").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/5kA2am59jblp8ladR2?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/5kA2am59jblp8ladR2?prefilled_email=" + email.value;
     }
 
     else if (montant === "100b") {
@@ -436,9 +433,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_100").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/28o02e59j759cBq4gl?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/28o02e59j759cBq4gl?prefilled_email=" + email.value;
     }
 
    else if (montant === "50b") {
@@ -452,9 +447,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_50").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/6oEdT445f4X1eJy00e?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/6oEdT445f4X1eJy00e?prefilled_email=" + email.value;
     }
     
     
@@ -469,9 +462,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_50").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/4gw7uGfNXahlatifZ9?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/4gw7uGfNXahlatifZ9?prefilled_email=" + email.value;
     }
     
     else if (montant === "30") {
@@ -485,9 +476,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_30").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/14k9COfNXahl8la00a?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/14k9COfNXahl8la00a?prefilled_email=" + email.value;
     }
 
     else if (montant === "30b") {
@@ -501,9 +490,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_30").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/6oE2ambxHahleJy00d?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/6oE2ambxHahleJy00d?prefilled_email=" + email.value;
     }
 
     else if (montant === "20") {
@@ -517,9 +504,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_20").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/28o4iuatD0GLbxmbIR?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/28o4iuatD0GLbxmbIR?prefilled_email=" + email.value;
     }
 
     else if (montant === "15") {
@@ -533,9 +518,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_15").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/4gwg1c0T3exBfNC28g?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/4gwg1c0T3exBfNC28g?prefilled_email=" + email.value;
     }
 
     else if (montant === "10") {
@@ -549,9 +532,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_10").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/28o4iufNXgFJ7h69AH?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/28o4iufNXgFJ7h69AH?prefilled_email=" + email.value;
     }
 
     else if (montant === "5") {
@@ -566,9 +547,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_5").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://buy.stripe.com/eVadT4cBL89d58YdQW?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://buy.stripe.com/eVadT4cBL89d58YdQW?prefilled_email=" + email.value;
     }
 
     else if (montant === "1000") {
@@ -582,9 +561,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_1000").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/cN29COdFPcptaticMQ?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/cN29COdFPcptaticMQ?prefilled_email=" + email.value;
     }
     
     else if (montant === "500") {
@@ -598,9 +575,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_500").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/4gweX8cBL3SX8la9AD?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/4gweX8cBL3SX8la9AD?prefilled_email=" + email.value;
     }
     
     else if (montant === "200") {
@@ -614,9 +589,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_200").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/eVa2am59j6151WMaEG?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/eVa2am59j6151WMaEG?prefilled_email=" + email.value;
     }
 
     else if (montant === "80") {
@@ -630,9 +603,7 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don2_80").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/28o4iu9pzahl6d2001?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/28o4iu9pzahl6d2001?prefilled_email=" + email.value;
     }
 
     else if (montant === "0") {
@@ -646,9 +617,6 @@ montantWrapper.forEach(
       });
       document.getElementById("ic_don_libre").classList.add("current");
 
-      btnDynamic.classList.remove("hide");
-      btnWebflow.classList.add("hide");
-      btnDynamic.href = "https://donate.stripe.com/4gw8yKatD0GLdFu8ww?prefilled_email=" + emailUser.value;
+      btnDynamic.href = "https://donate.stripe.com/4gw8yKatD0GLdFu8ww?prefilled_email=" + email.value;
     }    
-  
-  }
+}
