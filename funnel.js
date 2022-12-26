@@ -9,6 +9,12 @@ const btnWebflow = document.getElementById("btn_form");
 let email = document.getElementById("email");
 let prenomUser = document.getElementById("prenom").value;
 let nomUser = document.getElementById("nom").value;
+let adresseUser = document.getElementById("adresse").value;
+let villeUser = document.getElementById("ville").value;
+let cpUser = document.getElementById("cp").value;
+let paysUser = document.getElementById("pays").value;
+
+
 
 const wrapperToModify = [
   "don_100",
@@ -649,3 +655,7 @@ montantWrapper.forEach(
       btnDynamic.href = "https://donate.stripe.com/4gw8yKatD0GLdFu8ww?prefilled_email=" + email.value;
     }    
 }
+
+btnDynamic.addEventListener('click', function() {
+  fetch("https://hooks.zapier.com/hooks/catch/8045333/b7g1tjl/?email="+email.value + "&recu=" + recu + "&montant=" + montant + "&moyen=" + payment + "&recurrence=" + frequencePayment + "&nom=" + nom.value + "&prenom=" + prenom.value + "&adresse=" + adresse.value + "&ville=" + ville.value + "&cp=" + cp.value + "&pays=" + pays.value) ;
+});
