@@ -18,6 +18,7 @@ const wrapperToModify = [
   "don_15",
   "don_10",
   "don_5",
+  "don_3",
   "don_libre-wrapper",
   "don2_1000",
   "don2_500",
@@ -36,6 +37,7 @@ const iconToModify = [
   "ic_don_15",
   "ic_don_10",
   "ic_don_5",
+  "ic_don_3",
   "ic_don_libre",
   "ic_don2_1000",
   "ic_don2_500",
@@ -231,6 +233,7 @@ montantWrapper.forEach(
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
+    document.getElementById("don_libre").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -238,6 +241,7 @@ montantWrapper.forEach(
     document.getElementById("don_15").classList.remove("hide");
     document.getElementById("don_10").classList.remove("hide");
     document.getElementById("don_5").classList.remove("hide");
+    document.getElementById("don_3").classList.remove("hide");
 
     }
     
@@ -262,6 +266,7 @@ montantWrapper.forEach(
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -269,6 +274,7 @@ montantWrapper.forEach(
     document.getElementById("don_15").classList.add("hide");
     document.getElementById("don_10").classList.add("hide");
     document.getElementById("don_5").classList.add("hide");
+    document.getElementById("don_3").classList.add("hide");
     }
 
     // Moyens de paiement
@@ -310,20 +316,22 @@ montantWrapper.forEach(
     wrapperToModify.forEach(elementId => {
       document.getElementById(elementId).classList.remove("bg-orange");
     });
-    document.getElementById("don2_1000").classList.add("hide");
-    document.getElementById("don2_500").classList.add("hide");
-    document.getElementById("don2_200").classList.add("hide");
-    document.getElementById("don2_80").classList.add("hide");
-    document.getElementById("don2_100").classList.add("hide");
-    document.getElementById("don2_50").classList.add("hide");
-    document.getElementById("don2_30").classList.add("hide");
-    document.getElementById("don_100").classList.remove("hide");
-    document.getElementById("don_50").classList.remove("hide");
-    document.getElementById("don_30").classList.remove("hide");
-    document.getElementById("don_20").classList.remove("hide");
-    document.getElementById("don_15").classList.remove("hide");
-    document.getElementById("don_10").classList.remove("hide");
-    document.getElementById("don_5").classList.remove("hide");
+    document.getElementById("don2_1000").classList.remove("hide");
+    document.getElementById("don2_500").classList.remove("hide");
+    document.getElementById("don2_200").classList.remove("hide");
+    document.getElementById("don2_80").classList.remove("hide");
+    document.getElementById("don2_100").classList.remove("hide");
+    document.getElementById("don2_50").classList.remove("hide");
+    document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_100").classList.add("hide");
+    document.getElementById("don_50").classList.add("hide");
+    document.getElementById("don_30").classList.add("hide");
+    document.getElementById("don_20").classList.add("hide");
+    document.getElementById("don_15").classList.add("hide");
+    document.getElementById("don_10").classList.add("hide");
+    document.getElementById("don_5").classList.add("hide");
+    document.getElementById("don_3").classList.add("hide");
     }
     
     // Si paiement par chèque
@@ -346,20 +354,22 @@ montantWrapper.forEach(
     wrapperToModify.forEach(elementId => {
       document.getElementById(elementId).classList.remove("bg-orange");
     });
-    document.getElementById("don2_1000").classList.add("hide");
-    document.getElementById("don2_500").classList.add("hide");
-    document.getElementById("don2_200").classList.add("hide");
-    document.getElementById("don2_80").classList.add("hide");
-    document.getElementById("don2_100").classList.add("hide");
-    document.getElementById("don2_50").classList.add("hide");
-    document.getElementById("don2_30").classList.add("hide");
-    document.getElementById("don_100").classList.remove("hide");
-    document.getElementById("don_50").classList.remove("hide");
-    document.getElementById("don_30").classList.remove("hide");
-    document.getElementById("don_20").classList.remove("hide");
-    document.getElementById("don_15").classList.remove("hide");
-    document.getElementById("don_10").classList.remove("hide");
-    document.getElementById("don_5").classList.remove("hide");
+    document.getElementById("don2_1000").classList.remove("hide");
+    document.getElementById("don2_500").classList.remove("hide");
+    document.getElementById("don2_200").classList.remove("hide");
+    document.getElementById("don2_80").classList.remove("hide");
+    document.getElementById("don2_100").classList.remove("hide");
+    document.getElementById("don2_50").classList.remove("hide");
+    document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_100").classList.add("hide");
+    document.getElementById("don_50").classList.add("hide");
+    document.getElementById("don_30").classList.add("hide");
+    document.getElementById("don_20").classList.add("hide");
+    document.getElementById("don_15").classList.add("hide");
+    document.getElementById("don_10").classList.add("hide");
+    document.getElementById("don_5").classList.add("hide");
+    document.getElementById("don_3").classList.add("hide");
     }
 
     // Si paiement par carte & fréquence mensuelle
@@ -376,6 +386,7 @@ montantWrapper.forEach(
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
+    document.getElementById("don_libre").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -383,6 +394,7 @@ montantWrapper.forEach(
     document.getElementById("don_15").classList.remove("hide");
     document.getElementById("don_10").classList.remove("hide");
     document.getElementById("don_5").classList.remove("hide");
+    document.getElementById("don_3").classList.remove("hide");
     }
 
     else if (payment === "carte" && frequencePayment === "ponctuelle"){
@@ -398,6 +410,7 @@ montantWrapper.forEach(
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -405,6 +418,7 @@ montantWrapper.forEach(
     document.getElementById("don_15").classList.add("hide");
     document.getElementById("don_10").classList.add("hide");
     document.getElementById("don_5").classList.add("hide");
+    document.getElementById("don_3").classList.add("hide");
     }
 
     // Mettre le wrapper en orange pour le montant
@@ -548,6 +562,21 @@ montantWrapper.forEach(
       document.getElementById("ic_don_5").classList.add("current");
 
       btnDynamic.href = "https://buy.stripe.com/eVadT4cBL89d58YdQW?prefilled_email=" + email.value;
+    }
+
+    else if (montant === "3") {
+      wrapperToModify.forEach(elementId => {
+        document.getElementById(elementId).classList.remove("bg-orange");
+      });
+      document.getElementById("don_3").classList.add("bg-orange");
+      
+
+      iconToModify.forEach(elementId => {
+        document.getElementById(elementId).classList.remove("current");
+      });
+      document.getElementById("ic_don_3").classList.add("current");
+
+      btnDynamic.href = "https://buy.stripe.com/8wM8yKdFP89d58YdR5?prefilled_email=" + email.value;
     }
 
     else if (montant === "1000") {
