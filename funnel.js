@@ -292,27 +292,6 @@ function updateValue() {
 
     // Montrer les champs CP, Ville etc..
     document.getElementById("coordonnee2").classList.remove("hide");
-
-    //   // Afficher les bons montants de don
-    // wrapperToModify.forEach((elementId) => {
-    //   document.getElementById(elementId).classList.remove("bg-orange");
-    // });
-    // document.getElementById("don2_1000").classList.remove("hide");
-    // document.getElementById("don2_500").classList.remove("hide");
-    // document.getElementById("don2_200").classList.remove("hide");
-    // document.getElementById("don2_80").classList.remove("hide");
-    // document.getElementById("don2_100").classList.remove("hide");
-    // document.getElementById("don2_50").classList.remove("hide");
-    // document.getElementById("don2_30").classList.remove("hide");
-    // document.getElementById("don_libre").classList.remove("hide");
-    // document.getElementById("don_100").classList.add("hide");
-    // document.getElementById("don_50").classList.add("hide");
-    // document.getElementById("don_30").classList.add("hide");
-    // document.getElementById("don_20").classList.add("hide");
-    // document.getElementById("don_15").classList.add("hide");
-    // document.getElementById("don_10").classList.add("hide");
-    // document.getElementById("don_5").classList.add("hide");
-    // document.getElementById("don_3").classList.add("hide");
   }
 
   // Si paiement par chèque
