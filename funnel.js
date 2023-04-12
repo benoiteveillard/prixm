@@ -328,7 +328,7 @@ function updateValue() {
     document.getElementById("ic_cheque").classList.add("current");
 
     // Cacher les champs CP, Ville etc..
-    document.getElementById("coordonnee2").classList.add("hide");
+    document.getElementById("coordonnee2").classList.remove("hide");
 
     // Afficher les bons montants de don
     wrapperToModify.forEach((elementId) => {
