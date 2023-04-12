@@ -166,15 +166,15 @@ function updateValue() {
   // Si avec reçu fiscal et par virement
   else if (recu === "avec" && payment === "virement") {
     // Cacher la fréquence de don
-    document.getElementById("step2-bis").classList.add("hide");
+    document.getElementById("step2-bis").classList.remove("hide");
 
     // Changer le titre de l'étape 4
-    document.getElementById("titre-step4bis").classList.remove("hide");
-    document.getElementById("titre-step4").classList.add("hide");
+    document.getElementById("titre-step4bis").classList.add("hide");
+    document.getElementById("titre-step4").classList.remove("hide");
 
     // Changer le titre de l'étape 5
-    document.getElementById("titre-step5bis").classList.remove("hide");
-    document.getElementById("titre-step5").classList.add("hide");
+    document.getElementById("titre-step5bis").classList.add("hide");
+    document.getElementById("titre-step5").classList.remove("hide");
 
     // Cacher le bouton Stripe
     btnDynamic.classList.add("hide");
