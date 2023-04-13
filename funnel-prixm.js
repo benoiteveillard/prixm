@@ -80,9 +80,7 @@ window.onload = async () => {
 
       const { error, paymentIntent } = await stripe.confirmPayment({
         elements,
-        confirmParams: {
-          return_url: "https://prixm.webflow.io/don-merci?moyen=carte",
-        },
+        redirect: "if_required",
       });
 
       if (error) {
@@ -98,9 +96,16 @@ window.onload = async () => {
           paymentIntent.next_action &&
           paymentIntent.next_action === "redirect_to_url"
         ) {
+          // Add a delay before the redirection
           setTimeout(() => {
             window.location = action.redirect_to_url.url;
-          }, 2000); //
+          }, 2000); // 2 seconds delay
+        } else {
+          // Redirect to the success page if there's no next_action
+          setTimeout(() => {
+            window.location = "https://prixm.webflow.io/don-merci?moyen=carte";
+            console.log("waiting 3s");
+          }, 3000); // 2 seconds delay
         }
       }
     });
