@@ -49,9 +49,11 @@ window.onload = async () => {
           } else {
             // Lorsque le paiement est un succès
             Wized.request.execute("Retrieve PaymentIntent Virement");
+            console.log("pm attached");
             setTimeout(() => {
               window.location.href =
                 "https://www.prixm.org/don-merci?moyen=virement";
+              console.log("redirect incomng");
             }, 1000);
           }
         });
