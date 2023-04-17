@@ -49,11 +49,9 @@ window.onload = async () => {
           } else {
             // Lorsque le paiement est un succès
             Wized.request.execute("Retrieve PaymentIntent Virement");
-            console.log("pm attached");
             setTimeout(() => {
               window.location.href =
                 "https://www.prixm.org/don-merci?moyen=virement";
-              console.log("redirect incomng");
             }, 1000);
           }
         });
@@ -92,7 +90,6 @@ window.onload = async () => {
       } else {
         // After a successful payment, execute the Wized request
         Wized.request.execute("Retrieve PaymentIntent CB");
-        console.log("running");
 
         if (
           paymentIntent.next_action &&
@@ -106,8 +103,7 @@ window.onload = async () => {
           // Redirect to the success page if there's no next_action
           setTimeout(() => {
             window.location = "https://prixm.webflow.io/don-merci?moyen=carte";
-            console.log("waiting 3s");
-          }, 3000); // 2 seconds delay
+          }, 1000); // 2 seconds delay
         }
       }
     });
