@@ -220,6 +220,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
+    document.getElementById("don_libre-component").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -318,6 +319,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre-component").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -362,6 +364,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre-component").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -406,6 +409,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
+    document.getElementById("don_libre-component").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
