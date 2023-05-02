@@ -705,7 +705,7 @@ btnDynamic.addEventListener("click", function () {
 });
 
 const montantLibre = document.getElementById("montant_libre");
-const libreRadio = document.getElementById("libre");
+const libreRadio = document.getElementById("free");
 
 montantLibre.addEventListener("focus", () => {
   libreRadio.focus();
