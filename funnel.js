@@ -576,6 +576,34 @@ function updateValue() {
     btnDynamic.href =
       "https://buy.stripe.com/8wM8yKdFP89d58YdR5?prefilled_email=" +
       emailUser.value;
+  } else if (montant === "free") {
+    wrapperToModify.forEach((elementId) => {
+      document.getElementById(elementId).classList.remove("bg-orange");
+    });
+    document.getElementById("don_libre_wrapper").classList.add("bg-orange");
+
+    iconToModify.forEach((elementId) => {
+      document.getElementById(elementId).classList.remove("current");
+    });
+    document.getElementById("ic_don_libre").classList.add("current");
+
+    btnDynamic.href =
+      "https://buy.stripe.com/8wM8yKdFP89d58YdR5?prefilled_email=" +
+      emailUser.value;
+  } else if (montant === "3") {
+    wrapperToModify.forEach((elementId) => {
+      document.getElementById(elementId).classList.remove("bg-orange");
+    });
+    document.getElementById("don_3").classList.add("bg-orange");
+
+    iconToModify.forEach((elementId) => {
+      document.getElementById(elementId).classList.remove("current");
+    });
+    document.getElementById("ic_don_3").classList.add("current");
+
+    btnDynamic.href =
+      "https://buy.stripe.com/8wM8yKdFP89d58YdR5?prefilled_email=" +
+      emailUser.value;
   } else if (montant === "1000") {
     wrapperToModify.forEach((elementId) => {
       document.getElementById(elementId).classList.remove("bg-orange");
