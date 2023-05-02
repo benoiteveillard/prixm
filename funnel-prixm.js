@@ -98,7 +98,7 @@ window.onload = async () => {
           // Add a delay before the redirection
           setTimeout(() => {
             window.location = action.redirect_to_url.url;
-          }, 2000); // 2 seconds delay
+          }, 1000); // 2 seconds delay
         } else {
           // Redirect to the success page if there's no next_action
           setTimeout(() => {
@@ -108,4 +108,16 @@ window.onload = async () => {
       }
     });
   });
+  // Loader après click sur le bouton de paiement de CB
+  let submitStripeCb = document.getElementById("submit-cb");
+
+  // Loader après click sur le bouton de paiement de virement
+  let submitStripeVirement = document.getElementById("submit-button");
+
+  submitStripeCb.addEventListener("click", showLoader);
+  submitStripeVirement.addEventListener("click", showLoader);
+
+  function showLoader() {
+    document.getElementById("submit_loader").style.display = "flex";
+  }
 };

@@ -23,7 +23,7 @@ const wrapperToModify = [
   "don_10",
   "don_5",
   "don_3",
-  "don_libre-wrapper",
+  "don_libre_wrapper",
   "don2_1000",
   "don2_500",
   "don2_200",
@@ -220,7 +220,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
-    document.getElementById("don_libre").classList.add("hide");
+    document.getElementById("don_libre_wrapper").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -251,7 +251,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
-    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_libre_wrapper").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -320,7 +320,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
-    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_libre_wrapper").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -344,7 +344,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
-    document.getElementById("don_libre").classList.add("hide");
+    document.getElementById("don_libre_wrapper").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -365,7 +365,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
-    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_libre_wrapper").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -389,7 +389,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.add("hide");
     document.getElementById("don2_50").classList.add("hide");
     document.getElementById("don2_30").classList.add("hide");
-    document.getElementById("don_libre").classList.add("hide");
+    document.getElementById("don_libre_wrapper").classList.add("hide");
     document.getElementById("don_100").classList.remove("hide");
     document.getElementById("don_50").classList.remove("hide");
     document.getElementById("don_30").classList.remove("hide");
@@ -410,7 +410,7 @@ function updateValue() {
     document.getElementById("don2_100").classList.remove("hide");
     document.getElementById("don2_50").classList.remove("hide");
     document.getElementById("don2_30").classList.remove("hide");
-    document.getElementById("don_libre").classList.remove("hide");
+    document.getElementById("don_libre_wrapper").classList.remove("hide");
     document.getElementById("don_100").classList.add("hide");
     document.getElementById("don_50").classList.add("hide");
     document.getElementById("don_30").classList.add("hide");
@@ -636,12 +636,12 @@ function updateValue() {
     wrapperToModify.forEach((elementId) => {
       document.getElementById(elementId).classList.remove("bg-orange");
     });
-    document.getElementById("don_libre-wrapper").classList.add("bg-orange");
+    document.getElementById("don_libre_wrapper").classList.add("bg-orange");
 
     iconToModify.forEach((elementId) => {
       document.getElementById(elementId).classList.remove("current");
     });
-    document.getElementById("ic_don_libre").classList.add("current");
+    document.getElementById("ic_don").classList.add("current");
 
     btnDynamic.href =
       "https://donate.stripe.com/4gw8yKatD0GLdFu8ww?prefilled_email=" +
